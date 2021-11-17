@@ -1,8 +1,10 @@
-package hello.proxy.app.v1;
+package hello.proxy.app.v3;
 
-public class OrderRepositoryV1Impl implements OrderRepositoryV1 {
+import org.springframework.stereotype.Repository;
 
-	@Override
+@Repository
+public class OrderRepositoryV3 {
+
 	public void save(String itemId) {
 		// 저장 로직
 		if ("ex".equals(itemId)) {
@@ -19,4 +21,5 @@ public class OrderRepositoryV1Impl implements OrderRepositoryV1 {
 			e.printStackTrace();
 		}
 	}
+
 }
