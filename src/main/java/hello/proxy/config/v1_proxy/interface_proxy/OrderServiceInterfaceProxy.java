@@ -13,13 +13,13 @@ public class OrderServiceInterfaceProxy implements OrderServiceV1 {
 
 
 	@Override
-	public void OrderItem(String itemId) {
+	public void orderItem(String itemId) {
 		TraceStatus status = null;
 
 		try {
 			status = logTrace.begin("OrderService.OrderItem()");
 			// target 호출
-			target.OrderItem(itemId);
+			target.orderItem(itemId);
 			logTrace.end(status);
 
 		} catch (Exception e) {
